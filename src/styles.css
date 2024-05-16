@@ -1,0 +1,204 @@
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-login{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 15px;
+    background-color: black;
+}
+
+.wrap-login{
+    width: 390px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 77px 55px 33px 55px;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.login-form{
+    width: 100%;
+}
+
+.login-form-title{
+
+    font-family: "Nabla", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "EDPT" 100,
+      "EHLT" 12;
+
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.2;
+}
+
+.wrap-input{
+
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 37px;
+    margin: 30px 0;
+
+}
+
+.input{
+    font-size: 16px;
+    color: white;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    height: 45px;
+    padding: 0 5px;
+
+}
+
+.focus-input{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    color : #adadad;
+}
+
+.focus-input::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    transition: all 0.4s;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+
+    background: linear-gradient(90deg, #9790d8, #f9f871);
+}
+
+.focus-input::after{
+    font-size: 15px;
+    color: #9999;
+    line-height: 1.2;
+
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 16px;
+    left: 0;
+
+    padding-left: 5px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+
+}
+
+.input:focus{
+    outline: none;
+}
+
+.input:focus + .focus-input::after{
+    top: -15px;
+    font-size: 13px;
+}
+
+.input:focus + .focus-input::before{
+    width: 100%;
+}
+
+.container-login-form-btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.login-form-btn{
+    font-size: 15px;
+    color: white;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: #9790d8;
+    padding: 15px 30px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+
+    background: linear-gradient(90deg, #9790d8, #f9f871);
+
+}
+
+.login-form-btn:hover{
+    background: linear-gradient(90deg, #f9f871, #9790d8);
+}
+
+.text-center{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.txt1{
+    font-size: 15px;
+    color: white;
+    line-height: 1.2;
+    margin-right: 5px;
+}
+
+.txt2{
+    font-size: 15px;
+    color: #9790d8;
+    line-height: 1.2;
+    margin-left: 5px;
+}
+
+.has-val + .focus-input::after{
+    top: -15px;
+}
+
+.has-val + .focus-input::before{
+    width: 100%;
+}
